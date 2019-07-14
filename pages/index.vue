@@ -11,15 +11,11 @@ import Prismic from "prismic-javascript";
 import PrismicDOM from "prismic-dom";
 import PrismicConfig from "~/prismic.config.js"
 
-
 export default {
   async asyncData({ context, error, req }) {
     const api = await Prismic.getApi(PrismicConfig.apiEndpoint, {req})
 
-    // Query to get blog home content
-    //const document = await api.getSingle("homepage")
     const document = await api.getByUID("page", "homepage")
-    console.log(document)
     if (document) {
         return {
           text: document.data.text,

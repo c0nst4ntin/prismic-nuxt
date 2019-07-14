@@ -11,6 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@bazzite/nuxt-netlify": "^0.1.1",
     "nuxt": "^2.0.0",
     "nuxt-trailingslash-module": "^1.1.0",
     "prismic-dom": "^2.1.0",

@@ -36,7 +36,18 @@ export default {
   */
   modules: [
     'nuxt-trailingslash-module',
+    '@bazzite/nuxt-netlify',
   ],
+
+  netlify: {
+    redirects: [
+      {
+        from: '/*',
+        to: '/index.html',
+        status: 200
+      },
+    ]
+  },
   /*
   ** Build configuration
   */

@@ -16,7 +16,6 @@ export default {
     const api = await Prismic.getApi(PrismicConfig.apiEndpoint, {req})
 
     const document = await api.getByUID("page", "about")
-    console.log(document)
     if (document) {
         return {
           text: document.data.text,
