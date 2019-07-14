@@ -18,7 +18,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#000' },
   /*
   ** Global CSS
   */
@@ -30,6 +30,7 @@ export default {
   plugins: [
     '~/plugins/link-resolver.js',
     '~/plugins/prismic-vue.js',
+    '~/plugins/componentimporter.js',
   ],
   /*
   ** Nuxt.js modules
