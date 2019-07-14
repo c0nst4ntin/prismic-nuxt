@@ -28,12 +28,14 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    "~/plugins/vue-prismic"
+    '~/plugins/link-resolver.js',
+    '~/plugins/prismic-vue.js',
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
+    'nuxt-trailingslash-module',
   ],
   /*
   ** Build configuration
