@@ -1,12 +1,21 @@
 <template>
-    <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ullam voluptas maxime consequatur eos culpa voluptatem cupiditate tempora tempore non, vel magnam sapiente magni nulla delectus praesentium? Doloremque, vel sint.
-    </div>
+    <section class="textmodule" v-html="getText">
+
+    </section>
 </template>
 
 <script>
-export default {
+import PrismicDOM from 'prismic-dom'
+import LinkResolver from "~/plugins/link-resolver.js"
 
+export default {
+    name: 'textmodule',
+    props: ['slice'],
+    computed: {
+        getText: function () {
+            return PrismicDOM.RichText.asHtml(this.slice.primary.text, LinkResolver);
+        }
+    }
 }
 </script>
 
