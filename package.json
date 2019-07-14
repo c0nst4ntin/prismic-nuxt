@@ -1,0 +1,26 @@
+{
+  "name": "prismic-nuxt",
+  "version": "1.0.0",
+  "description": "A simple prismic.io boilerplate using Nuxt.js",
+  "author": "Constantin Ross",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@bazzite/nuxt-netlify": "^0.1.1",
+    "lodash": "^4.17.14",
+    "nuxt": "^2.0.0",
+    "nuxt-trailingslash-module": "^1.1.0",
+    "prismic-dom": "^2.1.0",
+    "prismic-javascript": "^2.0.3",
+    "prismic-vue": "git+https://github.com/prismicio/prismic-vue.git#nuxt",
+    "vue-component-importer": "0.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
