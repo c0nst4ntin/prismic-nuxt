@@ -24,7 +24,7 @@ export default {
         slices: document.data.body
       };
     } else {
-      console.log("ERROR");
+      error({ statusCode: 404, message: 'Page not found' })
     }
   }
 };

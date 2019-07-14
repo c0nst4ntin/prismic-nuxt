@@ -18,13 +18,13 @@ export default {
   async asyncData({ context, error, req }) {
     const api = await Prismic.getApi(PrismicConfig.apiEndpoint, {req})
 
-    const document = await api.getByUID("page", "homepage")
+    const document = await api.getByUID("page", "homepage");
     if (document) {
         return {
           slices: document.data.body,
         }
     } else {
-        console.log("ERROR")
+        error({ statusCode: 404, message: 'Page not found' })
     };
   },
 };
