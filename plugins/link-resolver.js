@@ -5,10 +5,6 @@ export default function (doc) {
         }
       return `/${doc.uid}` 
     }
-  
-    if (doc.type === 'post') {
-      return `/posts/${doc.uid}` 
-    }
-  
+
     return '/not-found'
   }

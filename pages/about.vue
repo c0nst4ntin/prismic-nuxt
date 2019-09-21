@@ -14,10 +14,17 @@ import Prismic from "prismic-javascript";
 import PrismicDOM from "prismic-dom";
 import PrismicConfig from "~/prismic.config.js";
 
+function initApi (req) {
+  return Prismic.getApi(PrismicConfig.apiEndpoint, {
+    accessToken: PrismicConfig.accessToken,
+    req: req
+  });
+}
+
 export default {
   async asyncData({ context, error, req }) {
-    const api = await Prismic.getApi(PrismicConfig.apiEndpoint, { req });
-
+    const api = await initApi(req)
+    
     const document = await api.getByUID("page", "about");
     if (document) {
       return {
