@@ -12,15 +12,14 @@
   },
   "dependencies": {
     "@bazzite/nuxt-netlify": "^0.1.1",
-    "lodash": "^4.17.14",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.9.2",
     "nuxt-trailingslash-module": "^1.1.0",
     "prismic-dom": "^2.1.0",
-    "prismic-javascript": "^2.0.3",
+    "prismic-javascript": "^2.1.1",
     "prismic-vue": "git+https://github.com/prismicio/prismic-vue.git#nuxt",
-    "vue-component-importer": "0.0.3"
+    "vue-component-importer": "0.0.4"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.19.2"
   }
 }
