@@ -23,6 +23,7 @@ export default {
   ** Global CSS
   */
   css: [
+    "~assets/scss/styles.scss"
   ],
   /*
   ** Plugins to load before mounting the App
@@ -36,6 +37,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/style-resources',
     'nuxt-trailingslash-module',
     '@bazzite/nuxt-netlify',
   ],
@@ -49,6 +51,14 @@ export default {
       },
     ]
   },
+
+  styleResources: {
+    scss: [
+      "~/assets/scss/_variables.scss",
+      "~/assets/scss/_mixins.scss"
+    ]
+  },
+
   /*
   ** Build configuration
   */
