@@ -1,8 +1,33 @@
-# prismic-nuxt
+<h2 align="center">prismic-nuxt</h2>
 
-> A simple prismic.io boilerplate using Nuxt.js
+<p align="center">
+  <a href="https://github.com/c0nst4ntin/prismic-nuxt/blob/master/LICENSE.md">
+    <img alt="License" src="https://img.shields.io/github/license/ConstantinRoss/prismic-nuxt.svg?color=orange">
+  </a>
+  <a href="https://img.shields.io/github/package-json/v/c0nst4ntin/prismic-nuxt">
+    <img src="https://img.shields.io/github/package-json/v/c0nst4ntin/prismic-nuxt?color=success">
+  </a>
+  <a href="https://nuxtjs.org">
+    <img src="https://img.shields.io/github/package-json/dependency-version/c0nst4ntin/prismic-nuxt/nuxt?color=blue">
+  </a>
+  <a href="https://sass-lang.com">
+    <img src="https://img.shields.io/github/package-json/dependency-version/c0nst4ntin/prismic-nuxt/dev/node-sass?color=ff69b4">
+  </a>
+</p>
 
-## Build Setup
+<p align="center">
+  <em>
+  A simple boilerplate using @prismicio & @nuxt
+  </em>
+</p>
+
+This Nuxt.js & Prismic.io boilerplate contains all the features and scripts you need to start developing websites using Nuxt.js and the Headless CMS Prismic.io.
+
+
+## Getting Started
+
+
+### Nuxt Setup
 
 ``` bash
 # install dependencies
@@ -19,4 +44,18 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+For a detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+### Prismic Config
+In the `./prismic.config.js` file you need to fill in your API Endpoint and your Access Token.
+If you don't have your repository set up to require an Access Token, go into the Prismic Settings and make sure that under "API & Security" you have your API access set to the 'Private API' option. Then generate a new Access Token.
+
+```javascript
+ var api = {
+    apiEndpoint: "https://your-repo-name.prismic.io/api/v2",
+    accessToken: "your-access-token"
+}
+
+module.exports = api;
+```
+
