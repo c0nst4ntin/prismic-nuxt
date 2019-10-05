@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/c0nst4ntin/prismic-nuxt/blob/master/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/ConstantinRoss/prismic-nuxt.svg?color=orange">
+    <img alt="License" src="https://img.shields.io/github/license/c0nst4ntin/prismic-nuxt.svg?color=orange">
   </a>
   <a href="https://github.com/c0nst4ntin/prismic-nuxt/">
     <img src="https://img.shields.io/github/package-json/v/c0nst4ntin/prismic-nuxt?color=success">
