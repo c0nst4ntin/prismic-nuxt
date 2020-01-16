@@ -23,6 +23,7 @@ export default {
   ** Global CSS
   */
   css: [
+    "~/assets/scss/styles.scss"
   ],
   /*
   ** Plugins to load before mounting the App
@@ -39,8 +40,6 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
   ],
   /*
   ** Build configuration
