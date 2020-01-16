@@ -11,8 +11,12 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.0",
     "nuxt": "^2.0.0",
-    "@nuxtjs/dotenv": "^1.4.0"
+    "prismic-dom": "^2.1.0",
+    "prismic-javascript": "^2.1.5"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@c0nst4ntin/vue-component-importer": "^1.0.0"
+  }
 }

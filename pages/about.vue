@@ -1,5 +1,5 @@
 <template>
-  <main class="index">
+  <main class="about">
     <component
       v-for="(slice, index) in slices"
       :key="index"
@@ -15,7 +15,7 @@ import Prismic from "prismic-javascript";
 export default {
   async asyncData({ context, error, req }) {
     const api = await Prismic.getApi(process.env.PRISMIC_API, { req });
-    const document = await api.getByUID("page", "home");
+    const document = await api.getByUID("page", "about");
     if (document) {
       return {
         slices: document.data.body
