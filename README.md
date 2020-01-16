@@ -23,13 +23,11 @@
 
 This Nuxt.js & Prismic.io boilerplate contains all the features and scripts you need to start developing websites using Nuxt.js and the Headless CMS Prismic.io.
 
-
 ## Getting Started
-
 
 ### Nuxt Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm run install
 
@@ -47,15 +45,15 @@ $ npm run generate
 For a detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 
 ### Prismic Config
+
 In the `./prismic.config.js` file you need to fill in your API Endpoint and your Access Token.
 If you don't have your repository set up to require an Access Token, go into the Prismic Settings and make sure that under "API & Security" you have your API access set to the 'Private API' option. Then generate a new Access Token.
 
 ```javascript
- var api = {
-    apiEndpoint: "https://your-repo-name.prismic.io/api/v2",
-    accessToken: "your-access-token"
-}
+var api = {
+  apiEndpoint: "https://your-repo-name.prismic.io/api/v2",
+  accessToken: "your-access-token"
+};
 
 module.exports = api;
 ```
-

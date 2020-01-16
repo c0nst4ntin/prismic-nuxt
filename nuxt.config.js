@@ -18,47 +18,29 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#000' },
+  loading: { color: '#fff' },
   /*
   ** Global CSS
   */
   css: [
-    "~assets/scss/styles.scss"
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/link-resolver.js',
-    '~/plugins/prismic-vue.js',
-    '~/plugins/componentimporter.js',
+  ],
+  /*
+  ** Nuxt.js dev-modules
+  */
+  buildModules: [
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/style-resources',
-    'nuxt-trailingslash-module',
-    '@bazzite/nuxt-netlify',
+    // Doc: https://github.com/nuxt-community/dotenv-module
+    '@nuxtjs/dotenv',
   ],
-
-  netlify: {
-    redirects: [
-      {
-        from: '/*',
-        to: '/index.html',
-        status: 200
-      },
-    ]
-  },
-
-  styleResources: {
-    scss: [
-      "~/assets/scss/_variables.scss",
-      "~/assets/scss/_mixins.scss"
-    ]
-  },
-
   /*
   ** Build configuration
   */
@@ -66,7 +48,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
+    extend (config, ctx) {
     }
   }
 }
