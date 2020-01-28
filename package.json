@@ -11,18 +11,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@bazzite/nuxt-netlify": "^0.1.1",
-    "@nuxtjs/style-resources": "^1.0.0",
-    "@c0nst4ntin/vue-component-importer": "^1.0.0",
-    "nuxt": "^2.10.2",
-    "nuxt-trailingslash-module": "^1.1.0",
+    "nuxt": "^2.0.0",
     "prismic-dom": "^2.1.0",
-    "prismic-javascript": "^2.1.1",
-    "prismic-vue": "git+https://github.com/prismicio/prismic-vue.git#nuxt"
+    "prismic-javascript": "^2.1.5"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0",
-    "nodemon": "^1.19.4",
-    "sass-loader": "^8.0.0"
+    "@c0nst4ntin/vue-component-importer": "^1.0.0",
+    "bootstrap": "^4.4.1",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2"
   }
 }

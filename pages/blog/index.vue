@@ -1,11 +1,10 @@
 <template>
-  <main class="about">
-    <component
-      v-for="(slice, index) in slices"
-      :key="index"
-      :is="slice.slice_type + 'module'"
-      :slice="slice"
-    ></component>
+  <main class="index">
+    <div v-for="post in posts" :key="post.uid">
+      <nuxt-link :to="getPostUrl(post.uid)">
+        {{ post.uid }}
+      </nuxt-link>
+    </div>
   </main>
 </template>
 
@@ -17,13 +16,20 @@ export default {
   async asyncData({ context, error, req }) {
     const api = await Prismic.getApi(PrismicConfig.apiEndpoint, { req });
 
-    const document = await api.getByUID("page", "about");
-    if (document) {
+    const response = await api.query(
+      Prismic.Predicates.at("document.type", "post")
+    );
+    if (response) {
       return {
-        slices: document.data.body
+        posts: response.results
       };
     } else {
       error({ statusCode: 4040, message: "Page not found" });
+    }
+  },
+  methods: {
+    getPostUrl(uid) {
+      return `/blog/${uid}`;
     }
   }
 };
