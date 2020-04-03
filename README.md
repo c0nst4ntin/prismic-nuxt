@@ -46,13 +46,11 @@ For a detailed explanation on how things work, checkout [Nuxt.js docs](https://n
 
 ### Prismic Config
 
-In the `./prismic.config.js` file you need to fill in your API Endpoint and your Access Token.
-If you don't have your repository set up to require an Access Token, go into the Prismic Settings and make sure that under "API & Security" you have your API access set to the 'Private API' option. Then generate a new Access Token.
+In the `./prismic.config.js` file you need to fill in your API Endpoint.
 
 ```javascript
 var api = {
   apiEndpoint: "https://your-repo-name.prismic.io/api/v2",
-  accessToken: "your-access-token"
 };
 
 module.exports = api;
