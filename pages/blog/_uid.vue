@@ -14,7 +14,7 @@ import Prismic from "prismic-javascript";
 import PrismicConfig from "~/prismic.config.js";
 
 export default {
-  async asyncData({ params, error, req }) {
+  async asyncData ({ params, error, req }) {
     const api = await Prismic.getApi(PrismicConfig.apiEndpoint, { req });
 
     const document = await api.getByUID("post", params.uid);

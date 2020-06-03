@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@c0nst4ntin/vue-component-importer": "^1.0.0",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2"
   }
