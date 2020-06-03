@@ -44,14 +44,16 @@ $ npm run generate
 
 For a detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 
-### Prismic Config
+### API Endpoint
 
-In the `./prismic.config.js` file you need to fill in your API Endpoint.
+In the `./nuxt.config.js` file you need to fill in your API Endpoint.
 
 ```javascript
-var api = {
-  apiEndpoint: "https://your-repo-name.prismic.io/api/v2",
-};
-
-module.exports = api;
+/*
+** Prismic configuration
+*/
+prismic: {
+  endpoint: 'https://your-prismic-endpoint.cdn.prismic.io/api/v2',
+  ...
+},
 ```
