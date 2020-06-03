@@ -9,28 +9,23 @@
 </template>
 
 <script>
-import Prismic from "prismic-javascript";
-import PrismicConfig from "~/prismic.config.js";
-
 export default {
-  async asyncData({ context, error, req }) {
-    const api = await Prismic.getApi(PrismicConfig.apiEndpoint, { req });
-
-    const response = await api.query(
-      Prismic.Predicates.at("document.type", "post")
-    );
-    if (response) {
+  async asyncData({ $prismic, error }) {
+    try {
+      const document = await $prismic.api.query(
+        $prismic.predicates.at("document.type", "post")
+      );
       return {
-        posts: response.results
+        posts: document.results,
       };
-    } else {
-      error({ statusCode: 4040, message: "Page not found" });
+    } catch (e) {
+      error({ statusCode: 404, message: "Page not found" });
     }
   },
   methods: {
     getPostUrl(uid) {
       return `/blog/${uid}`;
-    }
-  }
+    },
+  },
 };
 </script>

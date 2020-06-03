@@ -1,6 +1,6 @@
 {
   "name": "prismic-nuxt",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A simple prismic.io boilerplate using Nuxt.js",
   "author": "Constantin Ross",
   "private": true,
@@ -11,9 +11,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.12.2",
-    "prismic-dom": "^2.2.3",
-    "prismic-javascript": "^2.7.1"
+    "@nuxtjs/prismic": "^1.2.1",
+    "nuxt": "^2.12.2"
   },
   "devDependencies": {
     "@c0nst4ntin/vue-component-importer": "^1.0.0",
