@@ -11,12 +11,12 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/prismic": "^1.2.1",
-    "nuxt": "^2.13.1"
+    "@nuxtjs/prismic": "^1.2.4",
+    "nuxt": "^2.14.7"
   },
   "devDependencies": {
     "@c0nst4ntin/vue-component-importer": "^1.0.0",
-    "bootstrap": "^4.5.0",
+    "bootstrap": "^4.5.3",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2"
   }
