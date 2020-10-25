@@ -1,26 +1,4 @@
-import PrismicConfig from "./prismic.config.js";
-import Prismic from "prismic-javascript";
-
-/**
- * Find all documents for dynamic types and
- * return the urls
- */
-const dynamic_routes = () => {
-  let posts = Prismic.getApi(PrismicConfig.apiEndpoint)
-    .then(api => api.query(Prismic.Predicates.at("document.type", "post")))
-    .then(response => {
-      return response.results.map(post => {
-        const posturl = `blog/${post.uid.replace(/_/g, "/")}`;
-        return posturl;
-      })
-    })
-  return Promise.all([posts]).then(values => {
-    return [...values[0]];
-  })
-}
-
 export default {
-  mode: 'universal',
   /*
   ** Headers of the page
   */
@@ -35,32 +13,49 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
   /*
   ** Customize the progress-bar color
   */
   loading: { color: '#fff' },
+
   /*
   ** Global CSS
   */
   css: [
     "~/assets/scss/styles.scss"
   ],
+
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/componentimporter.js',
+    '~/plugins/vue-component-importer.js',
   ],
+
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
   ],
+
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '@/modules/static',
+    '@/modules/crawler',
+    '@nuxtjs/prismic'
   ],
+
+  /*
+  ** Prismic configuration
+  */
+  prismic: {
+    endpoint: 'https://prismic-nuxt-boilerplate.cdn.prismic.io/api/v2',
+    linkResolver: '~/app/prismic/link-resolver',
+  },
+
   /*
   ** Build configuration
   */
@@ -70,8 +65,5 @@ export default {
     */
     extend (config, ctx) {
     }
-  },
-  generate: {
-    routes: dynamic_routes
   }
 }
